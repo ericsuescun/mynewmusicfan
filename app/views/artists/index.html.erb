@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="jumbotron mt-5">
+    <h1 class="display-4">Music Artists</h1>
+    <p class="lead">Un pequeño recorrido por la música contemporánea más reconocida de Colombia.</p>
+    <div class="container">
+    <% @artist.each do |artist| %>
+    <div class="card d-inline-block mr-4" style="width: 12rem;">
+      <img class="card-img-top" src=<%= artist.image_url %> alt="Card image cap">
+      <div class="card-body text-center">
+        <h5 class="card-title text-center"><%= artist.name %></h5>
+        <p class="card-text text-center"></p>
+        <a href=<%= artist_path(artist) %> class="btn btn-primary btn-sm">Ver más</a>
+      </div>
+    </div>
+    <% end %>  
+    </div>
+    <hr class="my-4">
+    <p>Esperamos puedas disfrutar de los preview!</p>
+  </div>  
+</div>

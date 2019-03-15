@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="jumbotron mt-5">
+    <h1 class="display-4">Canciones</h1>
+    <p class="lead">De nuestros mejores artistas.</p>
+    <div class="container">
+        <div class="row">
+            <% @song.each do |song| %>
+            <div class="col">
+                <h5 class="card-title"><%= song.name %></h5>
+                <a href=<%= song.preview_url %> class="btn btn-primary btn-sm">Escúchala!</a>
+            </div>
+            <% end %>  
+            
+        </div>
+    </div>
+</div>  
+</div>
